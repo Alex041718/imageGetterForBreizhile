@@ -1,0 +1,16 @@
+version: '3'
+services:
+  web_image-getter:
+    image: php:8.2-apache-pdo-for_image-getter
+    build: ./dockerImage/initPhpApache/
+    container_name: breizh-ile_web-for_image-getter
+    volumes:
+      - ./html:/var/www/html
+    ports:
+      - "${WEB_PORT}:80"
+    networks:
+      - rezo_web_image-getter
+
+
+networks:
+  rezo_web_image-getter:

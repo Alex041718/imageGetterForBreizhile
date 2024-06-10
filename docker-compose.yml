@@ -1,8 +1,7 @@
 version: '3'
 services:
   web_image-getter:
-    image: php:8.2-apache-pdo-for_image-getter
-    build: ./dockerImage/initPhpApache/
+    image: php:8.2-apache
     container_name: breizh-ile_web-for_image-getter
     volumes:
       - ./html:/var/www/html
